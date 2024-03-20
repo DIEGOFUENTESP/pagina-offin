@@ -1,0 +1,1020 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  body::-webkit-scrollbar{
+    background-color: red;
+  }
+  body::-webkit-scrollbar-thumb{
+    background-color: #747577;
+  }
+    
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+  }
+     
+  .logo-container img {
+    width: 276px;
+  }
+    
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+    
+  .menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+    
+    
+  
+  .menu-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 600px; /* Ajusta el margen derecho según sea necesario */
+    }
+    
+  .menu-options a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 20px;
+    transition: background-color 0.3s ease;
+    margin-right: 50px;
+  }
+    
+    .menu-options a:hover {
+      background-color: orange;
+      text-decoration: underline;
+    }   
+    
+    /* Agregamos estilos para el submenú */
+    .services-menu {
+      position: relative;
+    }
+    
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -50%;
+      background-color: #333;
+      width: 300px;
+      z-index: 3;
+      white-space: nowrap;
+    }
+    
+    .services-menu:hover .submenu {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .submenu a {
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      border-bottom: 2px solid white;
+    }
+    
+    .submenu a:hover {
+      background-color: #555;
+    }
+    
+    /* Evita que el submenú se oculte cuando el cursor está sobre él */
+    .submenu:hover {
+      display: flex;
+    }
+    
+    
+    .menu-options a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+      font-size: 20px;      
+    }
+    
+    .menu-options a:hover {
+      background-color: orange;
+      text-decoration: underline;
+    }
+    .active {
+      background-color:red;
+    }
+    .submenu-indicator{
+      color:white;
+    }
+    .img-container {
+      position: relative;
+      z-index: -1;
+    }
+    /*whaapp*/
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    
+    .whatsapp-icon img {
+      width: 80px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .whatsapp-icon img:hover {
+      transform: scale(1.1);
+    }
+  /*oficina-virtual-bogota*/
+
+  .overlay-text {
+    position: absolute;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 1;
+    background-color:rgba(0, 0, 0, 0.5);
+    padding: 100px;
+    border-radius: 100px;
+  }
+  
+  .overlay-text h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  .overlay-text p{
+    color: white;
+    font-size: 20px;
+    text-align: justify;
+  }
+  
+  .overlay-text ul {
+    font-size: 30px;
+    margin: 5px 0;
+    text-align: justify;
+  }
+  .puntos::before {
+    content: "\2713"; /* Unicode para la marca de verificación */
+    color: green; /* Color verde */
+    margin-right: 10px; /* Espacio entre la marca de verificación y el texto */
+    font-size: 40px;
+  }
+  .overlay-text button {
+    margin-right: 10px;
+    background-color: red;
+    width: 250px;
+    height: 60px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 25px;
+    color: white;    
+  }
+  .overlay-text button a{
+    text-decoration: none;
+    color: white;
+  }
+  .overlay-text button:hover{
+    background-color: #747577;
+  }
+  .boton-agrandable {
+    padding: 10px 20px; /* Tamaño inicial del botón */
+    font-size: 16px; /* Tamaño inicial del texto */
+    transition: all 0.3s ease; /* Transición suave para el efecto */
+  }
+  
+  .boton-agrandable:hover {
+    padding: 15px 25px; /* Tamaño del botón al pasar el cursor por encima */
+    font-size: 30px; /* Tamaño del texto al pasar el cursor por encima */
+  }
+  /*.overlay-text button:last-child {
+    background-color: #747577; 
+    color: white; 
+  }
+  .overlay-text button:last-child:hover{
+    background-color: red;
+  }*/
+  .titulo2{
+    text-align: center;
+    font-size: 50px;
+  }
+  .gray{
+    color: #747577;
+  }
+  .red{
+    color: red;
+  }
+  .servicio-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px; /* Ajusta el margen superior según sea necesario */
+  }
+  
+  .servicio-text {
+    width: 60%; /* Ajusta el ancho del texto según sea necesario */
+    font-size: 25px;
+    padding: 0 100px;
+    text-align: justify;
+  }
+  
+  .servicio-imagen img {
+    width: 95%; /* La imagen ocupa el 100% del contenedor */
+    height: 90%; /* Mantiene la proporción original de la imagen */  
+    margin-right: 100px;   
+    border-radius: 20%;
+  }
+  .servicio-text a {
+    text-decoration: none;
+  }
+  .servicio-text button {   
+    background-color: red;
+    font-size: 25px;
+    border-radius: 30px;
+    width: 450px;
+    height: 70px;
+    color: white;
+    cursor: pointer;
+  }
+  .servicio-text button:hover{
+    background-color: #747577;
+  }
+  .servicio-text h3{
+    font-size: 35px;
+  }
+  .fondo-gray{
+    background-color: #F3F3F3;
+  }
+ 
+  .fondo-juntas1{
+    background-color: #D3D3D3;
+    
+  }
+  .fondo-juntas2{
+    padding-top: 2%;
+    background-color: #F3F3F3;
+  }
+
+.image-overlay button{
+  background-color: red;
+  width: 300px;
+  height: 80px;
+  font-size: 35px;
+  color: white;
+  border-radius: 40px;
+  cursor: pointer;
+}
+.image-overlay button:hover{
+  background-color: #747577;
+  font-size: 40px;
+}
+.cuadro-tarifa {
+  display: inline-block; /* Para colocar los cuadros uno al lado del otro */
+  width: 40%; /* Ajusta el ancho según sea necesario */
+  border: 2px solid black;
+  padding: 10px;
+  margin-right: 5%; /* Ajusta el margen entre los cuadros según sea necesario */
+  margin-bottom: 20px;
+  box-sizing: border-box; /* Incluye el padding y el borde en el ancho total */
+}
+.cuadro-tarifa.no-pagado {
+  border: 2px dashed black;
+}
+.cuadro-tarifa span {
+  display: block;
+  text-align: center;
+}
+
+.cuadro-tarifa .titulo {
+  font-weight: bold;  
+}
+
+.cuadro-tarifa .precio {
+  font-size: 1.2em;
+  color: red; /* o el color que prefieras */  
+}
+.oficina-virtual-bogota{
+  border: none;
+}
+
+/* Estilos del carrusel existente */
+.fondo-carrusel{
+  background-color: #F8F8F8;
+}
+.titulo-carrusel4{
+  color: red;
+  font-size: 50px;
+  text-align: center;
+}
+.slider-container {
+  display: flex;
+ /* width: 100%; Ajusta el ancho según tus necesidades */
+  height: 100%;
+  overflow-x: scroll;
+  margin-left: -20%;
+  overflow-x: hidden;
+}
+.slider-container h3{
+  margin-top: -40%;
+  font-size: 50px;
+  font-weight: bold;
+}
+.slider-container img {
+  flex: 0 0 auto;
+  width: 100%;
+  height: auto; /* Hace que la altura sea proporcional al ancho */
+  max-height: 80vh; /* Ajusta la altura máxima según tus necesidades */
+  object-fit: cover;
+}
+
+/* Estilos para el carrusel más pequeño */
+.small-carousel {
+  width: 30%; /* Ajusta el ancho según tus necesidades */
+  margin-left: 20px; /* Ajusta el margen izquierdo según tus necesidades */
+}
+
+.small-carousel .item {
+  margin-bottom: 20px; /* Ajusta el espaciado entre elementos según tus necesidades */
+}
+
+.small-carousel p {
+  margin: 0;
+  text-align: justify; /* Ajusta el alineamiento del texto según tus necesidades */
+  font-size: 22px;
+  margin-left: 100px;
+}
+.fondo-carrusel button{
+  background-color: red;
+  color: white;
+  font-size: 35px;
+  width: 300px;
+  height: 80px;
+  border-radius: 50px;
+  cursor: pointer;
+}
+.fondo-carrusel button:hover{
+  background-color: #747577;
+  font-size: 40px;
+}
+#theCarousel .carousel-indicators li {
+  background-color: red; /* Color de fondo para los indicadores inactivos */
+  margin-bottom: 200px; /* Ajusta el margen inferior según tus necesidades */
+}
+
+#theCarousel .carousel-indicators .active {
+  background-color: #747577; /* Color de fondo para el indicador activo */
+  margin-bottom: 200px; /* Ajusta el margen inferior según tus necesidades */
+}
+/* Estilos para las dos secciones */
+.two-sections {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
+}
+
+/* Estilos para la sección izquierda con mapa */
+.map-section {
+  flex-basis: 48%; /* Ajusta el ancho de la sección izquierda según sea necesario */
+}
+.fondo-gris{
+  background-color: #A1A1A2;
+  padding: 250px 0 150px 0;
+}
+
+.map-container {
+  text-align: center;
+}
+
+/* Estilos para la sección derecha con texto y botón */
+.titulo-maps{
+  text-align: center;
+  color: red;
+  font-size: 50px;
+  margin-top: -200px;
+}
+.text-section {
+  flex-basis: 48%; /* Ajusta el ancho de la sección derecha según sea necesario */
+}
+
+.text-container {
+  text-align: center;
+}
+
+.text-container h3 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: red;
+}
+
+.text-container p {
+  font-size: 20px;
+  text-align: justify;
+  padding: 10px 100px 0 10px;
+  color: white;
+}
+
+.text-container button {
+  padding: 10px 20px;
+  font-size: 25px;
+  background-color: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 250px;
+  height: 70px;
+  border-radius: 50px;
+}
+
+.text-container button:hover {
+  background-color:orange;
+}
+.lista-interes {
+  font-size: 18px; /* Ajusta el tamaño de la letra según sea necesario */
+  color: white; /* Puedes ajustar el color del texto también */
+  list-style-type: none; /* Quita el estilo predeterminado de la lista desordenada */
+  padding: 0; /* Elimina cualquier relleno predeterminado en la lista */
+  text-align: justify;
+  padding: 20px;
+}
+
+.lista-interes li {
+  margin-bottom: 10px; /* Ajusta la separación vertical entre elementos según sea necesario */
+}
+
+.lista-interes li::before {
+  content: "\2022"; /* Código Unicode para un punto de lista */
+  color: red; /* Puedes ajustar el color del punto */
+  font-size: 35px; /* Ajusta el tamaño del punto según sea necesario */
+  display: inline-block;
+  width: 1em; /* Ajusta el ancho del punto */
+  margin-left: -1.5em; /* Ajusta el margen izquierdo para alinear el punto con el texto */
+  text-align: right; /* Alinea el punto a la derecha del espacio designado */
+  padding-right: 0.5em; /* Ajusta el espacio entre el punto y el texto */
+}
+
+
+/*carrusel 2*/
+.carrusel2{
+  background-color: #F8F8F8;
+}
+.titulo-carrusel2{
+  color: red;
+  text-align: center;
+  font-size: 50px;
+}
+#my-carousel-container {
+  position: relative;
+  width: 60%;
+  margin: auto;
+  overflow: hidden;
+}
+
+#my-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.my-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.my-slide img {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+
+
+.my-slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.5); 
+  padding: 20px; /* Añadido para separar el contenido del borde de la imagen */
+}
+
+.my-slide-title {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.my-slide-text {
+  font-size: 18px;
+}
+
+#my-nav-dots {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.my-dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.my-dot.active {
+  background-color: #747577;
+}
+
+.my-dot.my-image-2.active {
+  background-color: #747577;
+}
+
+.my-dot.my-image-3.active {
+  background-color: #747577;
+}
+
+.my-dot.my-image-4.active {
+  background-color: #747577;
+}
+
+#my-nav-arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.my-arrow {
+  font-size: 24px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+.btn-carrusel{
+  background-color: red;
+  color: white;
+  border-radius: 30px;
+  font-size: 35px;
+  width: 300px;
+  height: 80px;
+}
+.btn-carrusel:hover{
+  background-color: #747577;
+  font-size: 40px;
+}
+/* Preguntas plegables */
+.faq-container {    
+  max-width: 80%; /* Cambiado de 800px a 80% */
+  margin: 5% auto 0 auto; /* Cambiado de 50px a 5% */
+  padding: 2%; /* Cambiado de 2rem a 2% */
+}
+
+.faq-container h2 {
+  margin-bottom: 5%; /* Cambiado de 50px a 5% */
+  font-size: 5rem;
+  font-weight: 600;
+  text-align: center;
+  color: red;
+}
+
+details { 
+  background-color: #f6f8fa;
+  width: 100%;
+  margin-bottom: 1rem;   
+  border-radius: 8px;  
+  border: 1px solid #d8e0e9;
+  color: #364f6b;
+  position: relative;  
+}
+
+details summary {  
+  font-weight: 400;
+  font-size: 35px;
+  padding: 1%;
+  cursor: pointer;
+  list-style: none;
+}
+
+details p {
+  padding: 1%;
+  margin: 0 1% 1% 1%;
+  background: #f6f8fa;
+  border-left: 2px solid #364f6b;
+  font-size: 25px;
+}
+
+details:hover,
+details[open] {
+  box-shadow: 5px 5px 15px #d9d9d9;
+}
+details[open] summary {
+  font-weight: 600;
+  color: red;
+}
+
+details[open] {
+  background: #ffffff;
+}
+
+details[open] summary {
+  font-weight: 600;
+}
+
+details summary::before {
+  position: absolute;
+  content: "👇";    
+  font-size: 1.75rem;
+  top: 10px;
+  right: 16px;  
+}
+
+details[open] summary::before {
+  -webkit-animation: rotate 0.6s ease-in-out both;
+  animation: rotate-emoji 0.6s ease-in-out both;
+}
+
+.faq-container a {
+  text-decoration: none;
+}
+
+@-webkit-keyframes rotate-emoji {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+/*Formulario*/
+.background-image {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('./img/juntas.jpg'); /* Reemplaza 'ruta_de_tu_imagen.jpg' con la ruta correcta de tu imagen descargada */
+  background-size: cover;
+  background-position: center;
+}
+.background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; 
+}
+
+
+.blanco{
+  color: white;
+}
+
+/* Estilos para el formulario */
+.formulario-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 35%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo blanco semi-transparente */
+  padding: 30px;
+  border-radius: 50px;
+  z-index: 1; /* Asegura que esté sobre la imagen de fondo */
+}
+.formulario-container h2{
+  font-size: 35px;
+}
+
+.formulario-container label {
+  display: block;
+  margin: 15px 0;
+}
+
+.formulario-container input,
+.formulario-container select,
+.formulario-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.formulario-container button {
+  padding: 15px 200px;
+  font-size: 20px;
+  background-color: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 25px;
+}
+
+.formulario-container button:hover {
+  background-color: #747577;
+}
+
+/* Modificación para el posicionamiento del texto y el checkbox */
+.checkbox-container {
+  text-align: left;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input {
+  margin-right: 10px;
+}
+
+.checkbox-container label {
+  color: white; /* Color blanco para el texto */
+  margin-right: 800px; /* Ajuste del margen derecho para acercar el texto al checkbox */
+  white-space: nowrap;
+}
+/*fotter*/
+
+.fondo-fotter{
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding-top: 50px;           
+}
+
+/* Estilo del contenedor principal */
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Estilo de cada columna */
+.column-footer {
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.pie {
+  text-align: center;
+}
+
+/* Estilo para los íconos */
+.iconos {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.icono {
+  font-size: 50px;
+  margin: 0 10px;
+  color: white;
+}
+.column-footer a {
+text-decoration: none; /* Quitar la línea de abajo */
+color: white; /* Cambiar el color del texto a blanco */
+}
+
+
+
+  @media screen and (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+  }
+    
+      .menu-options {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        text-align: center;
+        margin-top: 40px;
+        z-index: 2;
+      }
+    
+      .menu-options a {
+        margin: 0;
+      }
+      .video-text p {
+          font-size: 20px;
+          margin: 0;
+        }
+    
+      .menu-options.active {
+        display: flex;
+        border-top: 1px solid white;
+      }
+    
+      .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+    
+      .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+    
+      .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+      
+      /*oficina-virtual-bogota*/
+      .banner{
+        height: 1000px;
+      }
+
+      .overlay-text {
+        position: absolute;
+        top: 55%; /* Ajusta este valor para posicionar el texto más arriba */
+        left: 50%;                
+        z-index: 1;        
+        padding: 25px;
+        width: 80%; /* Ajusta el ancho del texto según sea necesario */
+        margin-top: 35%;
+      }
+    
+      .overlay-text h1 {
+        font-size: 30px; /* Ajusta el tamaño del texto */
+        margin-bottom: 10px;
+      }
+    
+      .overlay-text ul {
+        font-size: 18px; /* Ajusta el tamaño de la lista */
+        margin: 5px 0;
+      }
+    
+      .overlay-text button {
+        margin-bottom: 10px; /* Ajusta el margen según sea necesario */
+        width: 100%; /* Hace que el botón ocupe el ancho completo */
+      }
+      .servicio-info {
+        flex-direction: column; /* Cambia la dirección del contenedor flex a columna */
+        text-align: center; /* Centra el contenido en la pantalla pequeña */
+    }
+
+    .servicio-text {
+        width: 80%; /* Ajusta el ancho del texto al 80% del contenedor */
+        padding: 0; /* Elimina el relleno en los lados para ocupar el ancho especificado */
+        margin: 0 auto 20px auto; /* Centra el texto horizontalmente y agrega un margen inferior */
+    }
+
+    .servicio-imagen img {
+        max-width: 100%; /* Ajusta el ancho máximo de la imagen al 100% */
+        height: auto; /* Ajusta automáticamente la altura para mantener la proporción */
+        margin:0;        
+    }
+    .servicio-video{
+        width: 90%;
+        margin-right: -10%;
+        margin-left: 10%;
+        height: 350px;
+    }
+    .servicio-text button{
+        width: 100%;
+    }
+    /*imagen con icono*/
+    .image-overlay {
+      top: 50%;
+    }
+    .image-overlay h2{
+      font-size: 35px;
+    }
+    .icon-text i{
+      font-size: 80px;
+      margin-top: 20%;
+    }
+    .arriba{
+      margin-top: -30%;
+    }
+    .full-width-image img {
+      width: 100%;
+      height: 500%;
+    }
+    
+    .cuadro-tarifa {      
+      width: 100%; /* Ajusta el ancho según sea necesario */      
+    }
+    /*carruerl y texto*/
+  
+    .slider-container {
+      flex-direction: column; /* Cambia la dirección del flexbox a columna */
+      width: 100%; /* Ajusta el ancho al 100% para ocupar el ancho completo de la pantalla */
+      margin-left: 0; /* Elimina el margen izquierdo */
+    }
+  
+    .small-carousel {
+      width: 100%; /* Ajusta el ancho al 100% para ocupar el ancho completo de la pantalla */
+      margin-left: 0; /* Elimina el margen izquierdo */
+    }
+    .small-carousel p {      
+      margin-left: 0;
+    }
+    #theCarousel .carousel-indicators li {
+      margin-bottom: 0; /* Ajusta el margen inferior según tus necesidades */
+    }
+    #theCarousel .carousel-indicators .active {
+      margin-bottom: 0; /* Ajusta el margen inferior según tus necesidades */
+    }
+    /*maps y texto*/
+    .fondo-gris{
+      padding-top: 10%;
+    }
+    .titulo-maps{
+      margin-top: 50px;
+    }
+    .two-sections {
+      flex-direction: column; /* Cambia la dirección del flex container a columna en pantallas pequeñas */
+    }
+  
+    .map-section,
+    .text-section {
+      width: 100%; /* Asegúrate de que ambas secciones ocupen el 100% del ancho en pantallas pequeñas */
+      margin-left: 15px;
+    }
+    .lista-interes li::before {
+      padding-right: 0;
+    }
+    /*carrusel 2*/
+    #my-carousel-container {
+      width: 100%;
+    }
+
+    .my-slide-content {
+      top: 20%;
+      width: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .my-slide-title,
+    .my-slide-text {
+      font-size: 16px;
+    }
+
+    #my-nav-dots {
+      top: 90%;
+    }
+    /* Preguntas plegables */
+.faq-container {    
+  max-width: 95%; /* Cambiado de 800px a 80% */
+}
+details summary {  
+  font-size: 25px; 
+}
+
+details p {  
+  font-size: 15px;
+}
+/*formulario*/
+      /* Estilos para el formulario */
+      .formulario-container {      
+        width: 90%;       
+      }
+      .formulario-container button {
+        padding: 15px 20px;        
+      }
+      .checkbox-container label {
+        margin-right: 0;
+        white-space: normal;
+      }
+       /*footer*/
+    .container-footer {
+      flex-direction: column; /* Cambiar la dirección del flujo a columna */
+      align-items: center; /* Centrar los elementos en la columna */
+  }
+}

@@ -1,0 +1,760 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  body::-webkit-scrollbar{
+    background-color: red;
+  }
+  body::-webkit-scrollbar-thumb{
+    background-color: #747577;
+  }
+    
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+  }
+     
+  .logo-container img {
+    width: 276px;
+  }
+    
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+    
+  .menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+    
+    
+  
+  .menu-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 600px; /* Ajusta el margen derecho según sea necesario */
+    }
+    
+  .menu-options a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 20px;
+      transition: background-color 0.3s ease;
+    margin-right: 50px;
+  }
+    
+    .menu-options a:hover {
+      background-color: orange;
+      text-decoration: underline;
+    }
+    
+    .background-video {
+      position: relative;
+      width: 100%;
+      height: 50%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    
+    .background-video video {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+    }
+    
+    .video-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+    
+    .video-text p {
+      font-size: 45px;
+      margin: 0;
+    }
+    
+    
+    /* Agregamos estilos para el submenú */
+    .services-menu {
+      position: relative;
+    }
+    
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -50%;
+      background-color: #333;
+      width: 300px;
+      white-space: nowrap;
+    }
+    
+    .services-menu:hover .submenu {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .submenu a {
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      border-bottom: 2px solid white;
+    }
+    
+    .submenu a:hover {
+      background-color: #555;
+    }
+    
+    /* Evita que el submenú se oculte cuando el cursor está sobre él */
+    .submenu:hover {
+      display: flex;
+    }
+    
+    
+    .menu-options a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+      font-size: 20px;
+    }
+    
+    .menu-options a:hover {
+      background-color: orange;
+      text-decoration: underline;
+    }
+    .active {
+      background-color:red;
+    }
+    .submenu-indicator{
+      color:white;
+    }
+    .img-container {
+      position: relative;
+      z-index: -1;
+    }
+    /*whaapp*/
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    
+    .whatsapp-icon img {
+      width: 80px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .whatsapp-icon img:hover {
+      transform: scale(1.1);
+    }
+
+
+    /*hosting*/
+    /* Agrega estos estilos a tu CSS */
+.main-content {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-image: url('https://www.gratistodo.com/wp-content/uploads/2021/12/Fondos-bandera-Estados-Unidos-1.png');
+    color: rgba(255, 255, 255, 2);
+    text-align: center;
+  }
+  .main-content h2{
+    font-size: 350%;
+    font-weight: bold;    
+  }
+  .main-content p{
+    font-size: 200%; 
+    color: transparent;   
+  }
+  
+  .columns-container {
+    display: flex;
+    justify-content: center; /* Centra las columnas horizontalmente */
+    margin-top: 40px;
+    color: black;
+    font-size: 200%;
+  }
+  
+  .column {
+    flex-basis: auto; /* Deja que el navegador determine el ancho de las columnas */
+    margin-right: 15%; /* Agrega un margen derecho entre las columnas */    
+  }
+  
+  .column:last-child {
+    margin-right: 0; /* Elimina el margen derecho para la última columna */
+  }
+  
+  .left-list, .middle-list, .right-list {
+    list-style-type: none;
+    padding: 0;
+    
+  }
+  
+  .left-list ol, .middle-list ol, .right-list ol {
+    margin-bottom: 5px; /* Reducir el espacio entre los elementos de la lista */   
+  }
+  .puntos::before {
+    content: "\2713"; /* Unicode para la marca de verificación */
+    color: green; /* Color verde */
+    margin-right: 10px; /* Espacio entre la marca de verificación y el texto */
+    font-size: 40px;
+  }
+.btn-directorio{
+    width: 25%;
+    height: 15%;
+    font-size: 300%;
+    background-color: red;
+    color: white;
+    border-radius: 200px;
+}
+/*imagen con texto al lado*/
+.servicio-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px; /* Ajusta el margen superior según sea necesario */
+  }
+  
+  .servicio-text {
+    width: 60%; /* Ajusta el ancho del texto según sea necesario */
+    font-size: 20px;
+    padding: 0 100px;
+    text-align: justify;
+  }
+  .titulo-usa{
+    text-align: center;
+    font-size: 400%;
+    color: red;
+  }
+  
+  .servicio-imagen img {
+    width: 850px; /* La imagen ocupa el 100% del contenedor */
+    height: 100%; /* Mantiene la proporción original de la imagen */    
+  }
+  .servicio-text a {
+    text-decoration: none;
+  }
+  .servicio-text button {   
+    background-color: red;
+    font-size: 25px;
+    border-radius: 30px;
+    width: 250px;
+    height: 60px;
+    color: white;
+    cursor: pointer;
+  }
+  .servicio-text button:hover{
+    background-color: #747577;
+    font-size: 30px;
+  }
+  .fondo-gray{
+    background-color: #F3F3F3;
+  }
+  /*.bordes{
+    border: 2px solid #747577;
+  }*/
+  /*4 columnas con icono*/
+  .columna4-icono {
+    background-color: #c1c2c4;
+    padding: 5%;
+  }
+  
+  .four-columns-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .columna4-icono h2 {
+    text-align: center;
+    color: red;
+    font-size: 400%;
+  }
+  
+  .column {
+    flex-basis: calc(40% - 15%);
+    padding: 20px;
+    text-align: center;
+    margin-right: 10px;
+  }
+  
+  .column:last-child {
+    margin-right: 0;
+  }
+  
+  .column-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #65686a;
+    padding: 10%;
+    height: 100%;
+    border-radius: 50px;
+  }
+  
+  .column i {
+    font-size: 10rem;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .column h3 {
+    margin: 10px 0;
+    font-size: 3rem;
+    color: white;
+  }
+  
+  .column p {
+    margin: 0;
+    font-size: 2.50rem;
+    color: white;
+  }
+  
+  .columna4-icono button {
+    background-color: red;
+    color: white;
+    width: 25%;
+    height: 80%;
+    font-size: 350%;
+    border-radius: 3rem;
+  }
+  
+  .columna4-icono button:hover {
+    background-color: #747577;
+    font-size: 400%;
+  }
+  /*fondo y texto*/
+  .background-section {
+    background-image: url('../img/pexels-ricky-esquivel-1666667.jpg');
+    background-size: cover; /* Para cubrir todo el contenedor */
+    background-position: center; /* Centrar la imagen */
+    padding: 100px 0; /* Agregar relleno más grande */
+    text-align: center; /* Centrar el texto */
+    color: white; /* Color del texto */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 5);
+  }
+  
+  .background-section h2, .background-section h3 {
+    margin-bottom: 20px; /* Espacio entre los elementos */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);
+    font-size: 200%;
+    margin: 2%;
+    margin-top: 5%;
+  }
+  .background-section a {
+    color: orange;
+    text-decoration: none;
+  }
+  
+  .background-section button {
+    background-color: red;
+    color: white;
+    width: 15%;
+    height: 5rem;
+    font-size: 200%;
+    border-radius: 3rem;
+    cursor: pointer;
+  }
+  .background-section button:hover{
+    background-color: #747577;
+    font-size: 250%;
+  }
+  /* Preguntas plegables */
+.faq-container {    
+  max-width: 80%; /* Cambiado de 800px a 80% */
+  margin: 5% auto 0 auto; /* Cambiado de 50px a 5% */
+  padding: 2%; /* Cambiado de 2rem a 2% */
+}
+
+.faq-container h2 {
+  margin-bottom: 5%; /* Cambiado de 50px a 5% */
+  font-size: 5rem;
+  font-weight: 600;
+  text-align: center;
+  color: red;
+}
+
+details { 
+  background-color: #f6f8fa;
+  width: 100%;
+  margin-bottom: 1rem;   
+  border-radius: 8px;  
+  border: 1px solid #d8e0e9;
+  color: #364f6b;
+  position: relative;  
+}
+
+details summary {  
+  font-weight: 400;
+  font-size: 35px;
+  padding: 1%;
+  cursor: pointer;
+  list-style: none;
+}
+
+details p {
+  padding: 1%;
+  margin: 0 1% 1% 1%;
+  background: #f6f8fa;
+  border-left: 2px solid #364f6b;
+  font-size: 25px;
+}
+details ul,
+details ol{
+  font-size: 25px;
+}
+
+details:hover,
+details[open] {
+  box-shadow: 5px 5px 15px #d9d9d9;
+}
+details[open] summary {
+  font-weight: 600;
+  color: red;
+}
+
+details[open] {
+  background: #ffffff;
+}
+
+details[open] summary {
+  font-weight: 600;
+}
+
+details summary::before {
+  position: absolute;
+  content: "👇";    
+  font-size: 1.75rem;
+  top: 10px;
+  right: 16px;  
+}
+
+details[open] summary::before {
+  -webkit-animation: rotate 0.6s ease-in-out both;
+  animation: rotate-emoji 0.6s ease-in-out both;
+}
+
+.faq-container a {
+  text-decoration: none;
+}
+
+@-webkit-keyframes rotate-emoji {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+.red{
+  color: red;
+}
+/*Formulario*/
+.background-image {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* 100% del viewport height */
+  overflow: hidden;
+}
+
+.background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin deformarse */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+.blanco{
+  color: white;
+}
+
+/* Estilos para el formulario */
+.formulario-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 35%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo blanco semi-transparente */
+  padding: 30px;
+  border-radius: 50px;
+  z-index: 1; /* Asegura que esté sobre la imagen de fondo */
+}
+.formulario-container h2{
+  font-size: 35px;
+}
+
+.formulario-container label {
+  display: block;
+  margin: 15px 0;
+}
+
+.formulario-container input,
+.formulario-container select,
+.formulario-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.formulario-container button {
+  padding: 15px 200px;
+  font-size: 20px;
+  background-color: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 25px;
+}
+
+.formulario-container button:hover {
+  background-color: #747577;
+}
+
+/* Modificación para el posicionamiento del texto y el checkbox */
+.checkbox-container {
+  text-align: left;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input {
+  margin-right: 10px;
+}
+
+.checkbox-container label {
+  color: white; /* Color blanco para el texto */
+  margin-right: 800px; /* Ajuste del margen derecho para acercar el texto al checkbox */
+  white-space: nowrap;
+}
+
+/*fotter*/
+
+.fondo-fotter{
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding-top: 50px;           
+  }
+  
+  /* Estilo del contenedor principal */
+  .container-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  /* Estilo de cada columna */
+  .column-footer {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .pie {
+    text-align: center;
+  }
+  
+  /* Estilo para los íconos */
+  .iconos {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .icono {
+    font-size: 500%;
+    margin: 0 10px;
+    color: white;
+  }
+  .column-footer a {
+  text-decoration: none; /* Quitar la línea de abajo */
+  color: white; /* Cambiar el color del texto a blanco */
+  }
+  
+  .redondear{
+    border-radius: 10rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 5);
+  }
+
+  @media screen and (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+  }
+    
+      .menu-options {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        text-align: center;
+        margin-top: 40px;
+      }
+    
+      .menu-options a {
+        margin: 0;
+      }
+      .video-text p {
+          font-size: 20px;
+          margin: 0;
+        }
+    
+      .menu-options.active {
+        display: flex;
+        border-top: 1px solid white;
+      }
+    
+      .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+    
+      .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+    
+      .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+      .columns-container {
+        flex-direction: column;
+      }
+    
+      .column {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0; /* Elimina el margen derecho en dispositivos pequeños */
+      }
+    
+      .separator {
+        width: 100%;
+        margin: 10px 0; /* Espaciado arriba y abajo de la línea punteada en dispositivos pequeños */
+        border: 3px dashed red; /* Cambiar a línea punteada de color rojo en dispositivos pequeños */
+      }
+      .columna {
+        flex-basis: 100%;
+      }
+      .main-content {
+        flex-direction: column; /* Cambia la dirección del contenedor a columna */
+      }
+    
+      .left-section {
+        width: 100%; /* Ocupa el 100% del ancho del contenedor */
+      }
+    
+      .right-section {
+        width: 100%; /* Ocupa el 100% del ancho del contenedor */
+        margin-top: 20px; /* Agrega un margen superior para separar las secciones */
+      }
+    
+      .whatsapp-button {
+        margin: auto; /* Centra el botón horizontalmente */
+      }
+      .main-content p, .main-content li {       
+        padding: 0;        
+      }
+     /*columa texto y imagen*/
+     .servicio-info {
+        flex-direction: column; /* Cambia la dirección del contenedor flex a columna */
+        text-align: center; /* Centra el contenido en la pantalla pequeña */
+    }
+
+    .servicio-text {
+        width: 80%; /* Ajusta el ancho del texto al 80% del contenedor */
+        padding: 0; /* Elimina el relleno en los lados para ocupar el ancho especificado */
+        margin: 0 auto 20px auto; /* Centra el texto horizontalmente y agrega un margen inferior */
+    }
+
+    .servicio-imagen img {
+        max-width: 100%; /* Ajusta el ancho máximo de la imagen al 100% */
+        height: auto; /* Ajusta automáticamente la altura para mantener la proporción */
+        padding-bottom: 10%;        
+    }
+    /*4 columnas con icono*/
+    .four-columns-container {
+      flex-direction: column; /* Cambiar la dirección a columna en dispositivos pequeños */
+    }
+  
+    .column {
+      flex-basis: 100%; /* Ocupar todo el ancho disponible */
+      margin-bottom: 20px; /* Agregar espacio entre las columnas */
+      margin-right: 0; /* Eliminar el margen derecho */
+    }
+    .columna4-icono button{
+      width: 60%;
+      font-size: 200%;
+    }
+    /*fondo y texto*/
+    .background-section {
+      padding: 30px; /* Reducir el relleno en dispositivos pequeños */
+    }
+  
+    .background-section button {     
+      width: 80%;
+      height: 50%;      
+    }
+    /* Preguntas plegables */
+.faq-container {    
+  max-width: 95%; /* Cambiado de 800px a 80% */
+}
+details summary {  
+  font-size: 25px; 
+}
+
+details p {  
+  font-size: 15px;
+}
+/*formulario*/
+      /* Estilos para el formulario */
+      .formulario-container {      
+        width: 90%;       
+      }
+      .formulario-container button {
+        padding: 15px 20px;        
+      }
+      .checkbox-container label {
+        margin-right: 0;
+        white-space: normal;
+      }
+     /*footer*/
+    .container-footer {
+        flex-direction: column; /* Cambiar la dirección del flujo a columna */
+        align-items: center; /* Centrar los elementos en la columna */
+    }
+  
+  }

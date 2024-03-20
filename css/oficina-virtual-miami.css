@@ -1,0 +1,931 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  body::-webkit-scrollbar{
+    background-color: red;
+  }
+  body::-webkit-scrollbar-thumb{
+    background-color: #747577;
+  }
+    
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+  }
+     
+  .logo-container img {
+    width: 276px;
+  }
+    
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+    
+  .menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+    
+    
+  
+  .menu-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 600px; /* Ajusta el margen derecho según sea necesario */
+    z-index: 2;
+    }
+    
+  .menu-options a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 20px;
+    transition: background-color 0.3s ease;
+    margin-right: 50px;
+  }
+    
+    .menu-options a:hover {
+      background-color: orange;
+      text-decoration: underline;
+    }   
+    /* Agregamos estilos para el submenú */
+    .services-menu {
+      position: relative;
+    }
+    
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -50%;
+      background-color: #333;
+      width: 300px;
+      white-space: nowrap;
+    }
+    
+    .services-menu:hover .submenu {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .submenu a {
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      border-bottom: 2px solid white;
+    }
+    
+    .submenu a:hover {
+      background-color: #555;
+    }
+    
+    /* Evita que el submenú se oculte cuando el cursor está sobre él */
+    .submenu:hover {
+      display: flex;
+    }
+    
+    
+    .menu-options a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+      font-size: 20px;
+    }
+    
+    .menu-options a:hover {
+      background-color: orange;
+      text-decoration: underline;
+    }
+    .active {
+      background-color:red;
+    }
+    .submenu-indicator{
+      color:white;
+    }
+    .img-container {
+      position: relative;
+      z-index: -1;
+    }
+
+    /*whaapp*/
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    
+    .whatsapp-icon img {
+      width: 80px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .whatsapp-icon img:hover {
+      transform: scale(1.1);
+    }
+       
+    /*imagen y texto 50/50*/
+    .content {
+        display: flex;
+        margin-top: 20px;
+        position: relative; /* Agregamos posición relativa para el contenedor padre */
+        z-index: 1;
+      }
+      
+      .image-container {
+        flex: 1;
+        position: relative; /* Agregamos posición relativa para el contenedor de la imagen */
+      }
+      
+      .image-container h2,
+      .image-container p {
+        color: white;
+        position: absolute; /* Ajustamos posición absoluta para superponer sobre la imagen */
+        top: 25%; /* Colocamos en la mitad vertical de la imagen */
+        left: 33%; /* Colocamos en la mitad horizontal de la imagen */
+        transform: translate(-50%, -50%); /* Centramos el título y el texto */
+        text-align: center; /* Alineamos el texto al centro */
+        font-size: 3.3rem;
+        color: red;
+      }
+      .image-container p{
+        top:45%;
+        left: 33%;
+        font-size: 1.25rem;
+        color: white;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 2);                
+      }
+      
+      .image-container img {
+        width: 100%;
+      }
+      
+      .text-container {
+        flex: 1;
+        background-color: black;
+        color: white;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Esto centrará verticalmente el contenido */
+        align-items: center; /* Esto centrará horizontalmente el contenido */
+      }
+      
+      .text-container p {
+        margin-bottom: 20px;
+        font-size: 1.32rem;
+      }
+      
+      .cta-container button {
+        background-color: red;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        font-size: 1.5rem;
+        border-radius: 3rem;
+      }
+      
+      .cta-container button:hover {
+        background-color: #747577;
+        font-size: 2rem;
+      }
+      /*4 columnas con icono*/
+  .columna4-icono {    
+    padding: 5%;
+  }
+  .gray{
+    color: #747577;
+  }
+  
+  .four-columns-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  
+  .columna4-icono h2 {
+    text-align: center;
+    color: red;
+    font-size: 400%;
+  }
+  
+  .column {
+    flex-basis: calc(40% - 15%);
+    padding: 20px;
+    text-align: center;
+    margin-right: 10px;
+  }
+  
+  .column:last-child {
+    margin-right: 0;
+  }
+  
+  .column-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #65686a;
+    padding: 10%;
+    height: 80%;
+    border-radius: 50px;
+  }
+  
+  .column i {
+    font-size: 5rem;
+    margin-bottom: 10px;
+    color: white;
+  }
+  
+  .column h3 {
+    margin: 10px 0;
+    font-size: 2rem;
+    color: white;
+  }
+  
+  .column p {
+    margin: 0;
+    font-size: 1.50rem;
+    color: white;
+  }
+  
+  .columna4-icono button {
+    background-color: red;
+    color: white;
+    width: 25%;
+    height: 80%;
+    font-size: 3rem;
+    border-radius: 3rem;
+    cursor: pointer;
+  }
+  
+  .columna4-icono button:hover {
+    background-color: #747577;
+    font-size: 3.5rem;
+  }
+  /*imagen y texto 50/50*/
+  .titulo2{
+    text-align: center;
+    font-size: 50px;
+  }
+  .gray{
+    color: #747577;
+  }
+  .red{
+    color: red;
+  }
+  .servicio-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px; /* Ajusta el margen superior según sea necesario */
+  }
+  
+  .servicio-text {
+    width: 60%; /* Ajusta el ancho del texto según sea necesario */
+    font-size: 25px;
+    padding: 0 100px;
+    text-align: justify;
+    /*background-color: gray;*/
+  }
+  
+  .servicio-imagen img {
+    width: 850px; /* La imagen ocupa el 100% del contenedor */
+    height: 550px; /* Mantiene la proporción original de la imagen */
+    border-radius: 500px 10px 10px 50px; /* Añade bordes redondeados si lo deseas */
+  }
+  .servicio-text a {
+    text-decoration: none;
+  }
+  .servicio-text button {   
+    background-color: red;
+    font-size: 2rem;
+    border-radius: 30px;
+    width: 250px;
+    height: 60px;
+    color: white;
+    cursor: pointer;
+  }
+  .servicio-text button:hover{
+    background-color: #747577;
+    font-size: 2.5rem;
+  }
+  .fondo-gray{
+    /*background-color: #F3F3F3;*/
+  }
+  /*maps y texto 50/50*/
+
+
+  .two-sections {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px 0;
+  }
+  
+  /* Estilos para la sección izquierda con mapa */
+  .map-section {
+    flex-basis: 48%; /* Ajusta el ancho de la sección izquierda según sea necesario */
+  }
+  .fondo-gris{    
+    padding: 250px 0 150px 0;
+  }
+  
+  .map-container {
+    text-align: center;
+  }
+  
+  /* Estilos para la sección derecha con texto y botón */
+  .titulo-maps{
+    text-align: center;
+    color: red;
+    font-size: 50px;
+    margin-top: -200px;
+  }
+  .text-section {
+    flex-basis: 48%; /* Ajusta el ancho de la sección derecha según sea necesario */
+  }
+  
+  .text-container {
+    text-align: center;
+    background-color: gray;
+  }
+  
+  .text-container h3 {
+    font-size: 30px;
+    margin-bottom: 10px;
+    color: red;
+  }
+  
+  .text-container p {
+    font-size: 20px;
+    text-align: justify;
+    padding: 10px 100px 0 10px;
+    color: white;
+  }
+  
+  .text-container button {
+    padding: 10px 20px;
+    font-size: 2rem;
+    background-color: red;
+    border: none;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 250px;
+    height: 70px;
+    border-radius: 50px;
+  }
+  
+  .text-container button:hover {
+    background-color:orange;
+    font-size: 2.2rem;
+  }
+  .lista-interes {
+    font-size: 18px; /* Ajusta el tamaño de la letra según sea necesario */
+    color: white; /* Puedes ajustar el color del texto también */
+    list-style-type: none; /* Quita el estilo predeterminado de la lista desordenada */
+    padding: 0; /* Elimina cualquier relleno predeterminado en la lista */
+    text-align: justify;
+    padding: 20px;
+  }
+  
+  .lista-interes li {
+    margin-bottom: 10px; /* Ajusta la separación vertical entre elementos según sea necesario */
+  }
+  
+  .lista-interes li::before {
+    content: "\2022"; /* Código Unicode para un punto de lista */
+    color: red; /* Puedes ajustar el color del punto */
+    font-size: 35px; /* Ajusta el tamaño del punto según sea necesario */
+    display: inline-block;
+    width: 1em; /* Ajusta el ancho del punto */
+    margin-left: -1.5em; /* Ajusta el margen izquierdo para alinear el punto con el texto */
+    text-align: right; /* Alinea el punto a la derecha del espacio designado */
+    padding-right: 0.5em; /* Ajusta el espacio entre el punto y el texto */
+  }
+  /*carrusel 2*/
+.carrusel2{
+  background-color: #F8F8F8;
+}
+.titulo-carrusel2{
+  color: red;
+  text-align: center;
+  font-size: 50px;
+}
+#my-carousel-container {
+  position: relative;
+  width: 60%;
+  margin: auto;
+  overflow: hidden;
+}
+
+#my-carousel {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.my-slide {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.my-slide img {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+
+
+.my-slide-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  box-sizing: border-box;
+  /*background-color: rgba(0, 0, 0, 0.5); */
+  padding: 20px; /* Añadido para separar el contenido del borde de la imagen */
+}
+
+.my-slide-title {
+  font-size: 40px;
+  margin-bottom: 10px;
+}
+
+.my-slide-text {
+  font-size: 18px;
+}
+
+#my-nav-dots {
+  position: absolute;
+  top: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+}
+
+.my-dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.my-dot.active {
+  background-color: #747577;
+}
+
+.my-dot.my-image-2.active {
+  background-color: #747577;
+}
+
+.my-dot.my-image-3.active {
+  background-color: #747577;
+}
+
+.my-dot.my-image-4.active {
+  background-color: #747577;
+}
+
+#my-nav-arrows {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+}
+
+.my-arrow {
+  font-size: 24px;
+  cursor: pointer;
+  background-color: black;
+  color: white;
+}
+.btn-carrusel{
+  background-color: red;
+  color: white;
+  border-radius: 30px;
+  font-size: 35px;
+  width: 300px;
+  height: 80px;
+}
+.btn-carrusel:hover{
+  background-color: #747577;
+  font-size: 40px;
+}
+/* Preguntas plegables */
+.faq-container {    
+  max-width: 80%; /* Cambiado de 800px a 80% */
+  margin: 5% auto 0 auto; /* Cambiado de 50px a 5% */
+  padding: 2%; /* Cambiado de 2rem a 2% */
+}
+
+.faq-container h2 {
+  margin-bottom: 5%; /* Cambiado de 50px a 5% */
+  font-size: 5rem;
+  font-weight: 600;
+  text-align: center;
+  color: red;
+}
+
+details { 
+  background-color: #f6f8fa;
+  width: 100%;
+  margin-bottom: 1rem;   
+  border-radius: 8px;  
+  border: 1px solid #d8e0e9;
+  color: #364f6b;
+  position: relative;  
+}
+
+details summary {  
+  font-weight: 400;
+  font-size: 35px;
+  padding: 1%;
+  cursor: pointer;
+  list-style: none;
+}
+
+details p {
+  padding: 1%;
+  margin: 0 1% 1% 1%;
+  background: #f6f8fa;
+  border-left: 2px solid #364f6b;
+  font-size: 25px;
+}
+
+details:hover,
+details[open] {
+  box-shadow: 5px 5px 15px #d9d9d9;
+}
+details[open] summary {
+  font-weight: 600;
+  color: red;
+}
+
+details[open] {
+  background: #ffffff;
+}
+
+details[open] summary {
+  font-weight: 600;
+}
+
+details summary::before {
+  position: absolute;
+  content: "👇";    
+  font-size: 1.75rem;
+  top: 10px;
+  right: 16px;  
+}
+
+details[open] summary::before {
+  -webkit-animation: rotate 0.6s ease-in-out both;
+  animation: rotate-emoji 0.6s ease-in-out both;
+}
+
+.faq-container a {
+  text-decoration: none;
+}
+
+@-webkit-keyframes rotate-emoji {
+  0% {
+    -webkit-transform: rotate(0);
+    transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+}
+/*Formulario*/
+.background-image {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* 100% del viewport height */
+  overflow: hidden;
+}
+
+.background-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ajusta la imagen para cubrir el contenedor sin deformarse */
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Coloca la imagen detrás del contenido */
+}
+.blanco{
+  color: white;
+}
+
+/* Estilos para el formulario */
+.formulario-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 35%;
+  background-color: rgba(0, 0, 0, 0.2); /* Fondo blanco semi-transparente */
+  padding: 30px;
+  border-radius: 50px;
+  z-index: 1; /* Asegura que esté sobre la imagen de fondo */
+}
+.formulario-container h2{
+  font-size: 35px;
+}
+
+.formulario-container label {
+  display: block;
+  margin: 15px 0;
+}
+
+.formulario-container input,
+.formulario-container select,
+.formulario-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.formulario-container button {
+  padding: 15px 200px;
+  font-size: 20px;
+  background-color: red;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-radius: 25px;
+}
+
+.formulario-container button:hover {
+  background-color: #747577;
+}
+
+/* Modificación para el posicionamiento del texto y el checkbox */
+.checkbox-container {
+  text-align: left;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input {
+  margin-right: 10px;
+}
+
+.checkbox-container label {
+  color: white; /* Color blanco para el texto */
+  margin-right: 800px; /* Ajuste del margen derecho para acercar el texto al checkbox */
+  white-space: nowrap;
+}
+/*fotter*/
+
+.fondo-fotter{
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding-top: 50px;           
+}
+
+/* Estilo del contenedor principal */
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Estilo de cada columna */
+.column-footer {
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.pie {
+  text-align: center;
+}
+
+/* Estilo para los íconos */
+.iconos {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.icono {
+  font-size: 50px;
+  margin: 0 10px;
+  color: white;
+}
+.column-footer a {
+text-decoration: none; /* Quitar la línea de abajo */
+color: white; /* Cambiar el color del texto a blanco */
+}
+
+    
+  @media screen and (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+  }
+    
+      .menu-options {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        text-align: center;
+        margin-top: 40px;
+      }
+    
+      .menu-options a {
+        margin: 0;
+      }
+      
+    
+      .menu-options.active {
+        display: flex;
+        border-top: 1px solid white;
+      }
+    
+      .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+    
+      .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+    
+      .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+      .columns-container {
+        flex-direction: column;
+      }
+    
+      .column {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0; /* Elimina el margen derecho en dispositivos pequeños */
+      }
+    
+      .separator {
+        width: 100%;
+        margin: 10px 0; /* Espaciado arriba y abajo de la línea punteada en dispositivos pequeños */
+        border: 3px dashed red; /* Cambiar a línea punteada de color rojo en dispositivos pequeños */
+      }
+      .columna {
+        flex-basis: 100%;
+      }
+  
+      /*imagen y texto 50/50*/
+      .content {
+        flex-direction: column;
+      }
+      .image-container p{
+        top:60%;
+        left: 40%;                  
+      }
+    
+      .image-container {
+        order: 1; /* Cambia el orden para que la imagen esté debajo en dispositivos pequeños */
+      }
+      .image-container img {
+        width: 100%;
+        height: 500px;
+      }
+    
+      .text-container {
+        order: 1; /* Cambia el orden para que el texto esté encima en dispositivos pequeños */
+        margin-top: 20px; /* Agrega un margen superior para separar el texto de la imagen */
+      }
+      /*4 columnas con icono*/
+    .four-columns-container {
+        flex-direction: column; /* Cambiar la dirección a columna en dispositivos pequeños */
+      }
+    
+      .column {
+        flex-basis: 100%; /* Ocupar todo el ancho disponible */
+        margin-bottom: 20px; /* Agregar espacio entre las columnas */
+        margin-right: 0; /* Eliminar el margen derecho */
+        padding: 0;
+      }
+      .columna4-icono button{
+        width: 80%;
+        height: 5rem;
+        font-size: 200%;
+      }
+      /*imagen y texto 50/50*/
+      
+      .servicio-info {
+        flex-direction: column; /* Cambia la dirección del contenedor flex a columna */
+        text-align: center; /* Centra el contenido en la pantalla pequeña */
+    }
+
+    .servicio-text {
+        width: 80%; /* Ajusta el ancho del texto al 80% del contenedor */
+        padding: 0; /* Elimina el relleno en los lados para ocupar el ancho especificado */
+        margin: 0 auto 20px auto; /* Centra el texto horizontalmente y agrega un margen inferior */
+    }
+    /*maps y texto*/
+    .fondo-gris{
+        padding-top: 10%;
+      }
+      .titulo-maps{
+        margin-top: 50px;
+      }
+      .two-sections {
+        flex-direction: column; /* Cambia la dirección del flex container a columna en pantallas pequeñas */
+      }
+    
+      .map-section,
+      .text-section {
+        width: 100%; /* Asegúrate de que ambas secciones ocupen el 100% del ancho en pantallas pequeñas */
+        margin-left: 15px;
+      }
+      /*carrusel 2*/
+    #my-carousel-container {
+      width: 100%;
+    }
+
+    .my-slide-content {
+      top: 20%;
+      width: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .my-slide-title,
+    .my-slide-text {
+      font-size: 16px;
+    }
+
+    #my-nav-dots {
+      top: 90%;
+    }
+    /* Preguntas plegables */
+.faq-container {    
+  max-width: 95%; /* Cambiado de 800px a 80% */
+}
+details summary {  
+  font-size: 25px; 
+}
+
+details p {  
+  font-size: 15px;
+}
+/*formulario*/
+      /* Estilos para el formulario */
+      .formulario-container {      
+        width: 90%;       
+      }
+      .formulario-container button {
+        padding: 15px 20px;        
+      }
+      .checkbox-container label {
+        margin-right: 0;
+        white-space: normal;
+      }
+       /*footer*/
+    .container-footer {
+      flex-direction: column; /* Cambiar la dirección del flujo a columna */
+      align-items: center; /* Centrar los elementos en la columna */
+  }
+  }
+    
+
+  /*white-space: nowrap;*/

@@ -1,0 +1,395 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  body::-webkit-scrollbar{
+    background-color: red;
+  }
+  body::-webkit-scrollbar-thumb{
+    background-color: #747577;
+  }
+    
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+  }
+     
+  .logo-container img {
+    width: 276px;
+  }
+    
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+    
+  .menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+    
+    
+  
+  .menu-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 600px; /* Ajusta el margen derecho según sea necesario */
+    }
+    
+  .menu-options a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 20px;
+      transition: background-color 0.3s ease;
+    margin-right: 50px;
+  }
+    
+    .menu-options a:hover {
+      background-color: orange;
+      text-decoration: underline;
+    }
+    
+    .background-video {
+      position: relative;
+      width: 100%;
+      height: 50%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    
+    .background-video video {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+    }
+    
+    .video-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+    
+    .video-text p {
+      font-size: 45px;
+      margin: 0;
+    }
+    
+    
+    /* Agregamos estilos para el submenú */
+    .services-menu {
+      position: relative;
+    }
+    
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -50%;
+      background-color: #333;
+      width: 300px;
+      white-space: nowrap;
+    }
+    
+    .services-menu:hover .submenu {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .submenu a {
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      border-bottom: 2px solid white;
+    }
+    
+    .submenu a:hover {
+      background-color: #555;
+    }
+    
+    /* Evita que el submenú se oculte cuando el cursor está sobre él */
+    .submenu:hover {
+      display: flex;
+    }
+    
+    
+    .menu-options a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+      font-size: 20px;
+    }
+    
+    .menu-options a:hover {
+      background-color: orange;
+      text-decoration: underline;
+    }
+    .active {
+      background-color:red;
+    }
+    .submenu-indicator{
+      color:white;
+    }
+    .img-container {
+      position: relative;
+      z-index: -1;
+    }
+
+    /*whaapp*/
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    
+    .whatsapp-icon img {
+      width: 80px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .whatsapp-icon img:hover {
+      transform: scale(1.1);
+    }
+
+
+
+    
+    /*texto de la imagen banner*/
+    
+    
+    .banner-text {
+        position: absolute;
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        color: white;
+        width: 800px; /* Ajusta el ancho del contenedor según sea necesario */
+        height: auto;
+        background-color:rgba(0, 0, 0, 0.5);
+        padding: 20px;
+        border-radius: 50px;
+    }
+    
+    .banner-text h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+    
+    .banner-text p {
+        font-size: 25px;
+        margin-bottom: 10px;
+    }
+    .banner-text ul {      
+      font-size: 25px;      
+  }
+  ol {
+    list-style-type: none; /* Quitamos los números predeterminados */
+  }
+  
+  
+  /* Agregamos la marca de verificación de color verde */
+  ol::before {
+    content: "\2713"; /* Unicode para la marca de verificación */
+    color: green; /* Color verde */
+    margin-right: 10px; /* Espacio entre la marca de verificación y el texto */
+    font-size: 40px;
+  }
+  
+
+  /* Estilos para el botón de WhatsApp */
+.whatsapp-button {
+  background-color:green;
+  color: white;
+  border: none;
+  padding: 25px 45px;
+  border-radius: 15px;
+  font-size: 25px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto; /* Centrar el botón */
+  text-decoration: none; /* Quitamos la decoración de enlace */
+  width: 10%;
+  text-align: center;
+}
+
+/* Estilos para el botón de WhatsApp en hover */
+.whatsapp-button:hover {
+  background-color: darkred; /* Cambiamos el color de fondo al pasar el cursor */
+  border-color: darkred; /* Cambiamos el color del borde al pasar el cursor */
+  transform: translateY(-3px); /* Desplazamos el botón ligeramente hacia arriba */
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.6);
+}
+    
+
+    /*columnas con imagenes*/
+    .columns-container {
+        display: flex;
+        justify-content: space-around;
+        margin: 20px;
+      }
+  
+      .column {
+        width: 150px;
+        text-align: center;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        transition: background-color 0.3s ease;
+        width: 400px;
+      }
+  
+      .column:hover {
+        background-color: rgb(238, 168, 168);
+        color: red;
+      }
+  
+      .column img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+      }
+      /*fotter*/
+
+.fondo-fotter{
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding-top: 50px;           
+  }
+  
+  /* Estilo del contenedor principal */
+  .container-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  /* Estilo de cada columna */
+  .column-footer {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .pie {
+    text-align: center;
+  }
+  
+  /* Estilo para los íconos */
+  .iconos {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .icono {
+    font-size: 50px;
+    margin: 0 10px;
+    color: white;
+  }
+  .column-footer a {
+  text-decoration: none; /* Quitar la línea de abajo */
+  color: white; /* Cambiar el color del texto a blanco */
+  }
+    
+  @media screen and (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+  }
+    
+      .menu-options {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        text-align: center;
+        margin-top: 40px;
+      }
+    
+      .menu-options a {
+        margin: 0;
+      }
+      .video-text p {
+          font-size: 20px;
+          margin: 0;
+        }
+    
+      .menu-options.active {
+        display: flex;
+        border-top: 1px solid white;
+      }
+    
+      .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+    
+      .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+    
+      .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+      /*texto de la imagen banner*/
+    
+    
+    .banner-text {
+        width: 350px;
+        height: 800px;
+        top: 50%;
+        left: 50%;
+    }
+    .banner-text ul {      
+      font-size: 18px;      
+  }
+    .banner-text p {
+        font-size: 18px;
+    }
+    /*columna con imagenes*/
+    .columns-container {
+        flex-direction: column;
+      }
+
+      .column {
+        width: 100%; /* Ocupa todo el ancho */
+        margin-right: 0; /* Elimina el margen derecho */
+      }
+      /* Estilos para el botón de WhatsApp */
+      .whatsapp-button{
+        width: 35%;
+      }
+
+      /*footer*/
+    .container-footer {
+        flex-direction: column; /* Cambiar la dirección del flujo a columna */
+        align-items: center; /* Centrar los elementos en la columna */
+    }
+    
+     
+  }

@@ -1,0 +1,342 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  body::-webkit-scrollbar{
+    background-color: red;
+  }
+  body::-webkit-scrollbar-thumb{
+    background-color: #747577;
+  }
+    
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+  }
+     
+  .logo-container img {
+    width: 276px;
+  }
+    
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+    
+  .menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+    
+    
+  
+  .menu-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 600px; /* Ajusta el margen derecho según sea necesario */
+    }
+    
+  .menu-options a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 20px;
+      transition: background-color 0.3s ease;
+    margin-right: 50px;
+  }
+    
+    .menu-options a:hover {
+      background-color: orange;
+      text-decoration: underline;
+    }
+    
+    .background-video {
+      position: relative;
+      width: 100%;
+      height: 50%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    
+    .background-video video {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+    }
+    
+    .video-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+    
+    .video-text p {
+      font-size: 45px;
+      margin: 0;
+    }
+    
+    
+    /* Agregamos estilos para el submenú */
+    .services-menu {
+      position: relative;
+    }
+    
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -50%;
+      background-color: #333;
+      width: 300px;
+      white-space: nowrap;
+    }
+    
+    .services-menu:hover .submenu {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .submenu a {
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      border-bottom: 2px solid white;
+    }
+    
+    .submenu a:hover {
+      background-color: #555;
+    }
+    
+    /* Evita que el submenú se oculte cuando el cursor está sobre él */
+    .submenu:hover {
+      display: flex;
+    }
+    
+    
+    .menu-options a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+      font-size: 20px;
+    }
+    
+    .menu-options a:hover {
+      background-color: orange;
+      text-decoration: underline;
+    }
+    .active {
+      background-color:red;
+    }
+    .submenu-indicator{
+      color:white;
+    }
+    .img-container {
+      position: relative;
+      z-index: -1;
+    }
+    /*whaapp*/
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    
+    .whatsapp-icon img {
+      width: 80px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .whatsapp-icon img:hover {
+      transform: scale(1.1);
+    }
+    
+    
+  /*formulario-empresa-usa*/
+  /* Agrega este código al archivo estilos.css o donde estés manejando los estilos */
+  .titulo-formulario{
+    text-align: center;
+    color: red;
+    font-size: 50px;
+  }
+  
+  /* Estilo para el formulario */
+  .elementor-form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+  }
+  
+  /* Estilo para los campos del formulario */
+  .elementor-field {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+  }
+  
+  /* Estilo para el botón de enviar */
+  .elementor-button {
+    background-color: red;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  /* Cambia el color del botón al pasar el ratón */
+  .elementor-button:hover {
+    background-color: #747577;
+  }
+  
+  /* Ajusta el estilo del enlace en los términos y condiciones */
+  .elementor-acceptance-field a {
+    color: #3498db;
+    text-decoration: underline;
+  }
+  
+  /* Cambia el color del enlace al pasar el ratón */
+  .elementor-acceptance-field a:hover {
+    color: #2980b9;
+  }
+  .elementor-acceptance-field{
+    margin: -48%;
+  }
+  /*fotter*/
+
+.fondo-fotter{
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding-top: 50px;           
+  }
+  
+  /* Estilo del contenedor principal */
+  .container-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  /* Estilo de cada columna */
+  .column-footer {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .pie {
+    text-align: center;
+  }
+  
+  /* Estilo para los íconos */
+  .iconos {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .icono {
+    font-size: 50px;
+    margin: 0 10px;
+    color: white;
+  }
+  .column-footer a {
+  text-decoration: none; /* Quitar la línea de abajo */
+  color: white; /* Cambiar el color del texto a blanco */
+  }   
+    
+  @media screen and (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+  }
+    
+      .menu-options {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        text-align: center;
+        margin-top: 40px;
+      }
+    
+      .menu-options a {
+        margin: 0;
+      }
+      .video-text p {
+          font-size: 20px;
+          margin: 0;
+        }
+    
+      .menu-options.active {
+        display: flex;
+        border-top: 1px solid white;
+      }
+    
+      .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+    
+      .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+    
+      .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+      .columns-container {
+        flex-direction: column;
+      }
+    
+      .column {
+        width: 100%;
+        margin-bottom: 20px;
+        margin-right: 0; /* Elimina el margen derecho en dispositivos pequeños */
+      }
+    
+      .separator {
+        width: 100%;
+        margin: 10px 0; /* Espaciado arriba y abajo de la línea punteada en dispositivos pequeños */
+        border: 3px dashed red; /* Cambiar a línea punteada de color rojo en dispositivos pequeños */
+      }
+      .columna {
+        flex-basis: 100%;
+      }
+  
+      /*footer*/
+     .container-footer {
+        flex-direction: column; /* Cambiar la dirección del flujo a columna */
+        align-items: center; /* Centrar los elementos en la columna */
+    }
+  
+    
+  }
+    

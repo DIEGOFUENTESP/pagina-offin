@@ -1,0 +1,450 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+  }
+  body::-webkit-scrollbar{
+    background-color: red;
+  }
+  body::-webkit-scrollbar-thumb{
+    background-color: #747577;
+  }
+    
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+  }
+     
+  .logo-container img {
+    width: 276px;
+  }
+    
+  .menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
+  }
+    
+  .menu-toggle span {
+    height: 3px;
+    width: 25px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+    
+    
+  
+  .menu-options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 600px; /* Ajusta el margen derecho según sea necesario */
+    }
+    
+  .menu-options a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 20px;
+    transition: background-color 0.3s ease;
+    margin-right: 50px;
+    
+  }
+    
+    .menu-options a:hover {
+      background-color: orange;
+      text-decoration: underline;
+    }
+    
+    .background-video {
+      position: relative;
+      width: 100%;
+      height: 50%;
+      overflow: hidden;
+      z-index: -1;
+    }
+    
+    .background-video video {
+      width: 100%;
+      height: 50%;
+      object-fit: cover;
+    }
+    
+    .video-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+    }
+    
+    .video-text p {
+      font-size: 45px;
+      margin: 0;
+    }
+    
+    
+    /* Agregamos estilos para el submenú */
+    .services-menu {
+      position: relative;
+    }
+    
+    .submenu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: -50%;
+      background-color: #333;
+      width: 300px;
+      white-space: nowrap;
+    }
+    
+    .services-menu:hover .submenu {
+      display: flex;
+      flex-direction: column;
+    }
+    
+    .submenu a {
+      padding: 10px;
+      color: white;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      border-bottom: 2px solid white;
+    }
+    
+    .submenu a:hover {
+      background-color: #555;
+    }
+    
+    /* Evita que el submenú se oculte cuando el cursor está sobre él */
+    .submenu:hover {
+      display: flex;
+    }
+    
+    
+    .menu-options a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 20px;
+      margin: 0 10px;
+      transition: background-color 0.3s ease;
+      font-size: 20px;
+    }
+    
+    .menu-options a:hover {
+      background-color: orange;
+      text-decoration: underline;
+    }
+    .active {
+      background-color:red;
+    }
+    .submenu-indicator{
+      color:white;
+    }
+    .img-container {
+      position: relative;
+      z-index: -1;
+    }
+    
+    .welcome-text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      text-align: center;
+      font-size: 40px;
+      font-weight: bold;
+      background-color:rgba(0, 0, 0, 0.5);
+    }
+    .centered-text {
+      text-align: center;
+      margin-top: 110px;
+      font-size: 50px;
+      color: red;
+    }
+    .centered-text-overlay {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+      color: white;
+      font-size: 45px;
+    }
+    /*whaapp*/
+    .whatsapp-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 1000;
+    }
+    
+    .whatsapp-icon img {
+      width: 80px;
+      height: auto;
+      border-radius: 50%;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+    }
+    .whatsapp-icon img:hover {
+      transform: scale(1.1);
+    }
+    
+    /*2 columnas*/
+
+ /* Agrega estilos para la nueva sección */
+.contact-section {
+    background-color: #f1f1f1;
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px;
+  }
+  
+  /* Estilos para la columna de información de contacto */
+  .contact-info {
+    width: 80%;
+  }
+  
+  /* Estilos para la columna del formulario */
+  .contact-form {
+    width: 80%; /* Puedes ajustar el ancho según sea necesario */
+  }
+  
+  /* Estilos para el formulario (puedes personalizar según tus necesidades) */
+   
+  .contact-info h2 {
+    font-size: 50px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-info p {
+    margin: 0;
+    font-size: 25px;
+  }
+  .iconos {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .icono {
+    font-size: 50px;
+    margin: 0 10px;
+    color: red;
+  }
+  .icono-contacto {
+    color: red;
+  }
+  .iconos.redes-rojas a i {
+    color: red; /* Cambia el color a rojo */
+    font-size: 100px;
+  }
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar los elementos horizontalmente */
+    background-color: red;
+    padding: 20px;
+    border-radius: 20px;
+  }
+  
+  .contact-form label {
+    margin-bottom: 5px;
+    font-size: 14px; /* Tamaño de la etiqueta del formulario, ajusta según sea necesario */
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    margin-bottom: 10px;
+    padding: 5px; /* Ajusta el relleno del campo del formulario según sea necesario */
+    font-size: 14px; /* Tamaño del texto del campo del formulario, ajusta según sea necesario */
+    width: 60%; /* Ancho del input y textarea */
+    border-radius: 10px;
+    height: 30px;
+  }
+  .contact-form textarea{
+    height: 120px;
+  }
+  
+  /*.contact-form input[type="submit"] {
+    width: auto; 
+    background-color: black;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+  }*/
+  .contact-form input[type="submit"] {
+    width: 60%; /* Ajusta según sea necesario */
+    padding: 10px;
+    background-color: black;
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    height: 50px;
+  }
+  .contact-form input[type="submit"]:hover{
+    background-color: orange;
+  }
+  .contact-form .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px; /* Ajusta según sea necesario */
+  }
+  
+  .contact-form input[type="checkbox"] {
+    margin-right: 0px; /* Espaciado entre el checkbox y el texto */
+    height: 20px;
+    width: 50px;
+  }
+
+  .contact-form .checkbox-container label {
+    font-size: 20px; /* Tamaño de la letra, ajusta según sea necesario */
+  }
+  /*maps*/
+
+  .titulo-maps{
+    font-size: 50px;
+    text-align: center;
+    color: red;
+  }
+
+  /*fotter*/
+
+.fondo-fotter{
+    background-color: black;
+    color: white;
+    font-family: Arial, sans-serif;
+    padding-top: 50px;           
+  }
+  
+  /* Estilo del contenedor principal */
+  .container-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  /* Estilo de cada columna */
+  .column-footer {
+    flex: 1;
+    margin: 0 10px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+  
+  .pie {
+    text-align: center;
+  }
+  
+  /* Estilo para los íconos */
+  .iconos {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .icono {
+    font-size: 50px;
+    margin: 0 10px;
+    color: white;
+  }
+  .column-footer a {
+  text-decoration: none; /* Quitar la línea de abajo */
+  color: white; /* Cambiar el color del texto a blanco */
+  }
+  
+    
+  @media screen and (max-width: 768px) {
+      .menu-toggle {
+        display: flex;
+  }
+    
+      .menu-options {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #333;
+        text-align: center;
+        margin-top: 40px;
+      }          
+      .menu-options a {
+        margin: 0;
+      }
+      /*.menu-options a {
+        margin: 0;
+        border-top: 2px solid #ccc;
+        width: 100%;
+      }*/
+      .video-text p {
+          font-size: 20px;
+          margin: 0;
+        }
+    
+      .menu-options.active {
+        display: flex;
+        border-top: 1px solid white;
+      }
+    
+      .menu-toggle.active span:nth-child(1) {
+        transform: rotate(-45deg) translate(-5px, 6px);
+      }
+    
+      .menu-toggle.active span:nth-child(2) {
+        opacity: 0;
+      }
+    
+      .menu-toggle.active span:nth-child(3) {
+        transform: rotate(45deg) translate(-5px, -6px);
+      }
+      /*Formulario*/
+      
+      .contact-section {
+        flex-direction: column; /* Cambia la dirección del flexbox a columna */
+        align-items: center; /* Centra los elementos en el eje transversal (vertical) */
+      }
+    
+      .contact-info {
+        order: 2; /* Cambia el orden para que aparezca después del formulario */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        margin-top: 20px; /* Ajusta el espacio entre el formulario y la información de contacto */
+      }
+    
+      .contact-form {
+        order: 1; /* Cambia el orden para que aparezca antes de la información de contacto */
+        width: 180%; /* Ocupa el 80% del ancho disponible */
+        margin-bottom: 20px; /* Ajusta el espacio en la parte inferior del formulario */
+      }
+    
+      .contact-form input[type="checkbox"] {
+        margin-right: 0; /* Restaura el margen derecho a su valor original */
+      }
+      .contact-form input[type="submit"]{
+        width: 250px;
+      }
+      /*maps*/
+      .map-section {
+        margin-top: 10px; /* Ajusta el margen en dispositivos más pequeños */
+        width: 100%;
+      }
+
+      /*footer*/
+    .container-footer {
+        flex-direction: column; /* Cambiar la dirección del flujo a columna */
+        align-items: center; /* Centrar los elementos en la columna */
+    }
+  }

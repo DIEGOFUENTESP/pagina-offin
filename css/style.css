@@ -1,0 +1,689 @@
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+}
+body::-webkit-scrollbar{
+  background-color: red;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: #747577;
+}
+  
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px 20px;
+}
+   
+.logo-container img {
+  width: 276px;
+}
+  
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 10px;
+}
+  
+.menu-toggle span {
+  height: 3px;
+  width: 25px;
+  background-color: #fff;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+  
+  
+
+.menu-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 600px; /* Ajusta el margen derecho según sea necesario */
+  }
+  
+.menu-options a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  margin: 0 20px;
+    transition: background-color 0.3s ease;
+  margin-right: 50px;
+}
+  
+  .menu-options a:hover {
+    background-color: orange;
+    text-decoration: underline;
+  }
+  
+  .background-video {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .background-video video {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+  }
+  
+  .video-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+  }
+  
+  .video-text p {
+    font-size: 45px;
+    margin: 0;
+  }
+  
+  
+  /* Agregamos estilos para el submenú */
+  .services-menu {
+    position: relative;
+  }
+  
+  .submenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: -50%;
+    background-color: #333;
+    width: 300px;
+    white-space: nowrap;
+  }
+  
+  .services-menu:hover .submenu {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .submenu a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    border-bottom: 2px solid white;
+  }
+  
+  .submenu a:hover {
+    background-color: #555;
+  }
+  
+  /* Evita que el submenú se oculte cuando el cursor está sobre él */
+  .submenu:hover {
+    display: flex;
+  }
+  
+  
+  .menu-options a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    transition: background-color 0.3s ease;
+    font-size: 20px;
+  }
+  
+  .menu-options a:hover {
+    background-color: orange;
+    text-decoration: underline;
+  }
+  .active {
+    background-color:red;
+  }
+  .submenu-indicator{
+    color:white;
+  }
+  .img-container {
+    position: relative;
+    z-index: -1;
+  }
+  /*whaapp*/
+  .whatsapp-icon {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .whatsapp-icon img {
+    width: 80px;
+    height: auto;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+  }
+  .whatsapp-icon img:hover {
+    transform: scale(1.1);
+  }
+  
+  .welcome-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  .centered-text {
+    text-align: center;
+    margin-top: 110px;
+    font-size: 50px;
+    color: red;
+  }
+  .centered-text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    font-size: 45px;
+  }
+  
+  .img-container {
+    position: relative;
+    background-color: #F7F9FB;
+    overflow: hidden;
+  }
+  /*.wave-effect {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; 
+    background: url('./img/pexels-athena-2962135.jpg') repeat-x; 
+    z-index: 2;
+  }*/
+  
+  .columns-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .column {
+    width: calc(48% - 10px); /* Ajusta el ancho de las columnas según sea necesario, considerando el margen derecho */
+    margin-right: 10px; /* Margen derecho para separar las columnas */
+  }
+  .right-column {
+    margin-right: 300px; /* Margen a la derecha del texto en la columna derecha */
+    text-align: justify; /* Justificar el texto en la columna derecha */
+    font-size: 25px;
+  }
+  .separator {    
+    margin: 0 10px; /* Espaciado a ambos lados de la línea roja */
+    border-radius: 1px; /* Para que los extremos de la línea punteada sean más redondos */
+    border: 5px dashed red; /* Cambiar a línea punteada de color rojo */
+  }
+  .fondo-negro{
+    background-color: #000;
+  }
+  
+  .titulo-header {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .contenedor-columnas {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .columna {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .columna .contenido {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .columna .contenido img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  }
+  
+  .columna .contenido .superposicion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    font-size: 35px;
+    text-align: center;
+  }
+  
+  .columna:hover .superposicion,
+  .touch .columna .contenido .superposicion {
+    opacity: 1;
+  }
+  
+  .contenedor-botones {
+    position: relative;
+    text-align: center;
+  }
+  
+  .contenedor-botones button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 45px;
+    width: 300px;
+    font-size: 20px;
+  }
+  .titulo-fondo{
+    font-size: 50px;
+  }
+  .parrafo-fondo{
+    font-size: 25px;
+  }
+  /*banner de imagenes*/
+
+  .banner-imagenes3 {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan a la siguiente línea si no hay suficiente espacio */
+  }
+
+  .image-container-imagenes3 {
+    position: relative;
+    margin: 10px;
+    overflow: hidden;
+    flex: 1 1 300px; /* Establece un ancho máximo de 300px para cada imagen */
+  }
+
+  .image-container-imagenes3 img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-out;
+  }
+
+  .overlay-imagenes3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+    cursor: pointer;
+  }
+
+  .text-imagenes3,
+  .button-imagenes3 {
+    color: #fff;
+    font-size: 16px;
+    margin: 10px;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+  }
+
+  .button-imagenes3 {
+    background-color: #3498db;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+  }
+  .titulo-imagenes3{
+    text-align: center;
+    color: red;
+    font-size: 50px;
+  }
+
+  /*4 columnas con imagen y texto*/
+
+  .columnas4 {
+    background-color: #EFEFEF; /* Cambia el color de fondo según tus necesidades */
+    padding: 50px;
+    text-align: center;
+}
+
+.titulo-columnas4 {
+    color: #1C244B; /* Cambia el color del texto según tus necesidades */
+    font-size: 50px;
+    font-weight: bolder;
+}
+
+.columns4 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.column4 {
+    width: 23%;
+    padding: 10px;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 50px;
+}
+
+.column4 img {
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+}
+
+.column4 h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    font-weight: bolder;
+}
+
+.column4 p {
+    font-size: 22px;
+}
+
+/*fotter*/
+
+.fondo-fotter{
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding-top: 50px;           
+}
+
+/* Estilo del contenedor principal */
+.container-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+/* Estilo de cada columna */
+.column-footer {
+  flex: 1;
+  margin: 0 10px;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.pie {
+  text-align: center;
+}
+
+/* Estilo para los íconos */
+.iconos {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.icono {
+  font-size: 50px;
+  margin: 0 10px;
+  color: white;
+}
+.column-footer a {
+text-decoration: none; /* Quitar la línea de abajo */
+color: white; /* Cambiar el color del texto a blanco */
+}
+
+/* paginas politicas*/
+
+.titulo-politicas{
+  text-align: center;
+  color: red;
+  font-size: 50px;
+}
+.texto-politicas{
+  text-align: center;
+  padding: 0 350px 0  350px;
+  text-align: justify;
+}
+.lista-politicas{
+  text-align: center;
+  padding: 0 350px 0  350px;
+  text-align: justify;
+}
+.puntos::before{
+  content: '*';
+  margin-right: 0.5em;
+  color: red;
+  font-size: 1.5em;  
+}
+.enlace-sin-subrayado{
+  text-decoration: none;
+}
+.lista-politicas1{
+  text-align: center;
+  padding: 0 420px 0  420px;
+  text-align: justify;
+}
+
+/*pagina pqr*/
+
+.titulo-pqr{
+  text-align: center;
+  background-image: url('../img/fondo-hosting.png'); 
+  color: white;
+  font-size: 50px;
+  padding: 50px;
+}
+.formulario-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.formulario {
+  display: inline-block;
+  text-align: left;
+  padding: 80px;
+  border: 2px solid #333;
+  border-radius: 10px;
+}
+
+.formulario input,
+.formulario textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.formulario input[type="submit"] {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+.titulo-formulario{
+  text-align: center;
+  font-size: 30px;
+}
+
+label {
+  
+  align-items: center; /* Alinea el contenido verticalmente */
+  margin-top: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 5px;
+}
+
+/* Estilo para el checkbox cuando está seleccionado */
+/*input[type="checkbox"]:checked + label {
+  color: orange;
+  font-weight: bold;
+}*/
+
+/* Ajuste para mover el checkbox más a la izquierda */
+.formulario input[type="checkbox"] {
+  margin-right: 5px;
+  margin-left: -50%; /* Ajusta el margen izquierdo según sea necesario */
+}
+.condiciones{
+  margin-top: -3%;
+  margin-left: 3%;
+}
+
+.formulario input[type="submit"] {
+  background-color: #ff0000; /* Cambia #ff0000 al color que desees */
+  color: #fff; /* Cambiar el color del texto si es necesario */
+  /* Otros estilos según sea necesario */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 16px;
+}
+.formulario input[type="submit"] :hover{
+  background-color: #747577;
+}
+
+/* Estilo adicional al pasar el ratón sobre el botón */
+.formulario input[type="submit"]:hover {
+  background-color: green; /* Cambia #cc0000 al color deseado al pasar el ratón */
+  /* Otros estilos según sea necesario */
+}
+.formulario-container h3{
+  color: grey;
+}
+
+  
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+      display: flex;
+}
+  
+    .menu-options {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #333;
+      text-align: center;
+      margin-top: 40px;
+    }
+  
+    .menu-options a {
+      margin: 0;
+    }
+    .video-text p {
+        font-size: 20px;
+        margin: 0;
+      }
+  
+    .menu-options.active {
+      display: flex;
+      border-top: 1px solid white;
+    }
+  
+    .menu-toggle.active span:nth-child(1) {
+      transform: rotate(-45deg) translate(-5px, 6px);
+    }
+  
+    .menu-toggle.active span:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .menu-toggle.active span:nth-child(3) {
+      transform: rotate(45deg) translate(-5px, -6px);
+    }
+    .columns-container {
+      flex-direction: column;
+    }
+  
+    .column {
+      width: 100%;
+      margin-bottom: 20px;
+      margin-right: 0; /* Elimina el margen derecho en dispositivos pequeños */
+    }
+  
+    .separator {
+      width: 100%;
+      margin: 10px 0; /* Espaciado arriba y abajo de la línea punteada en dispositivos pequeños */
+      border: 3px dashed red; /* Cambiar a línea punteada de color rojo en dispositivos pequeños */
+    }
+    .columna {
+      flex-basis: 100%;
+    }
+
+    /*banner de 3 imagenes*/
+
+    .image-container-imagenes3 {
+      flex: 1 1 100%; /* Hace que las imágenes ocupen el ancho completo en dispositivos pequeños */
+      cursor: pointer;
+    }
+
+    /*4 columnas con imagen y texto*/
+
+    .columns4 {
+      flex-direction: column;
+      align-items: center;
+    }
+
+  .column4 {
+      width: 80%;
+      margin-bottom: 20px;
+    }
+    /*footer*/
+    .container-footer {
+      flex-direction: column; /* Cambiar la dirección del flujo a columna */
+      align-items: center; /* Centrar los elementos en la columna */
+  }
+  /*pagina politicas*/
+  .texto-politicas,
+  .texto-politicas1,
+  .lista-politicas,
+  .lista-politicas1{
+    padding: 1px;
+    margin: 20px;    
+  }
+
+  /*pagina pqr*/
+  .formulario-container {    
+    width: 100%;
+  }
+  .formulario input[type="checkbox"] {
+    margin-right: 5px;
+    margin-left: -50%; /* Ajusta el margen izquierdo según sea necesario */
+  }
+  .condiciones{
+    margin-top: -11%;
+    margin-left: 5%;
+  }
+
+}
+  
